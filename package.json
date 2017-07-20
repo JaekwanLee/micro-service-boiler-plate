@@ -1,0 +1,43 @@
+{
+  "name": "node-boiler-plate",
+  "version": "0.1.0",
+  "description": "A boiler plate setup with express for micro service in node",
+  "author": "<Author Name>",
+  "license": "ISC",
+  "main": "index.js",
+  "semistandard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "docs"
+    ]
+  },
+  "scripts": {
+    "doc": "jsdoc -r src -d docs",
+    "test": "mocha -R spec src/**/*.spec.js",
+    "start": "node src/index.js",
+    "lint": "semistandard --verbose | snazzy",
+    "node-debug": "DEBUG=express* node src/index.js",
+    "chrome-debug": "node --debug-brk --inspect src/index.js"
+  },
+  "keywords": [
+    "express",
+    "microservice"
+  ],
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.3.0",
+    "semistandard": "^11.0.0",
+    "should": "^11.2.1",
+    "snazzy": "^7.0.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "http-status": "^1.0.1",
+    "morgan": "^1.8.1"
+  }
+}

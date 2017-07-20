@@ -1,0 +1,45 @@
+#%RAML 1.0
+title: <Name of service>
+version: v1
+baseUri: <Base Url>
+
+/api-1:
+  description: Write descrition of resource
+
+  get:
+    description: Write description of api
+    responses:
+      200:
+        body:
+          application/json:
+
+/api-2:
+  description: Write descrition of resource
+  post:
+    description: append a new channel item
+      body:
+        application/json:
+          schema: |
+            {
+              "type": "object",
+              "$schema": "http://json-schema.org/draft-03/schema",
+              "id": "http://jsonschema.net",
+              "required": true,
+              "properties": {
+                "prop1": {
+                  "type": "string",
+                  "required": false
+                },
+                "prop2": {
+                  "type": "number",
+                  "required": false,
+                  "minimum": 0
+                }
+              }
+            }
+          example: |
+            {
+              "prop1": "hello",
+              "prop2": 55
+            }
+
